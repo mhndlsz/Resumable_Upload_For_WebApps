@@ -84,6 +84,8 @@
                     callback(cnt);
                 } else if (status == 200) {
                     $("#progress").text("Done.");
+                    var fileInfo = JSON.parse(xhr.responseText); //Retrieve uploaded file ID.
+                    console.log(fileInfo.id);
                 } else {
                     $("#progress").text("Error: " + xhr.response);
                 }
